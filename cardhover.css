@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: navy;
+}
+
+.containerCard {
+    width: 1100px;
+    position: relative;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.containerCard .card {
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background-color: white;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: .3s ease-in-out;
+    
+}
+
+.containerCard .card:hover {
+    height: 510px;
+}
+
+.containerCard .card .imagen {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 10px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.containerCard .card .imagen img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+
+.containerCard .card .contenido {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.containerCard .card:hover .contenido {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: .3s;
+}
