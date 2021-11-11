@@ -16,6 +16,7 @@ body {
 
 .containerCard {
     width: 1100px;
+    /* height: 650px; */
     position: relative;
     padding: 30px;
     display: flex;
@@ -64,6 +65,7 @@ body {
     padding: 10px 15px;
     text-align: center;
     color: #111;
+    background-color: rgb(76, 199, 76);
     visibility: hidden;
     opacity: 0;
     transition: .3s ease-in-out;
@@ -185,4 +187,89 @@ body {
 
 .imagen2 img:nth-child(2) {
     transform: rotateY(180deg);
+}
+
+/* tercer carta */
+
+.containerCard3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #1e1e1e;
+}
+
+.medio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.card3 {
+    cursor: pointer;
+    width: 340px;
+    height: 480px;
+}
+
+.frente, .trasera {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+}
+
+.frente img {
+    height: 100%;
+}
+
+.frente {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.trasera {
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.contenido-trasero {
+    color: #6550df;
+    text-align: center;
+    width: 100%;
+}
+
+.contenido-trasero span {
+    font-weight: bold;
+    color: #e21212;
+}
+
+.iconos3 {
+    margin: 20px 0;
+}
+
+.iconos3 a {
+    color: #6550df;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    transition: .4s;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.iconos3 a:hover {
+    color: white;
+    background-color: #6550df;
+}
+
+.card3:hover > .frente {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card3:hover > .trasera {
+    transform: perspective(600px) rotateY(0deg);
 }
